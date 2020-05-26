@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block title %}
+
+{{username}}
+
+{% endblock %}
+
+{% block body %}      
+
+<h1>You have succesfully logged in!</h1>
+
+<h3>Welcome back, {{username}}!</h3>
+
+<h5>Now you can review more than 5000 books!</h5>
+
+<p>
+    <form action="{{url_for('search_books')}}" method="post">
+        <div action="form-group">
+            Search book by ISBN:
+            <input type="text" name="book_isbn" placeholder="ISBN">
+    
+            Search book by title:
+            <input type="text" name="book_title" placeholder="Title">
+    
+            Search book by author:
+            <input type="text" name="book_author" placeholder="Title">
+    
+            <button>Submit!</button>
+        </div>
+    </form>
+    
+</p>
+
+{% endblock %}
+
+
+
+  
