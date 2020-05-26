@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}
+
+{{username}}
+
+{% endblock %}
+
+{% block body %}      
+
+<h1>You have succesfully signed in!</h1>
+
+Welcome, {{username}}!
+
+<p>Now you can log in with your username and password. <a href="{{url_for('index')}}">Go to the main page!</a></p>
+
+{% endblock %}
+
